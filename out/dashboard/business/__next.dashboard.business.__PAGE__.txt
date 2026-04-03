@@ -1,0 +1,6 @@
+1:"$Sreact.fragment"
+2:I[19915,["/_next/static/chunks/b257697234c683f9.js","/_next/static/chunks/f3def200d0b927d9.js","/_next/static/chunks/9ee55d18e90d3a2f.js","/_next/static/chunks/18f38dbeee9f54d3.js","/_next/static/chunks/a363963e17ad7ac3.js","/_next/static/chunks/bf79ffb3694dc29d.js"],"ProfitCalculator"]
+3:I[97367,["/_next/static/chunks/b43e70e148021a5b.js","/_next/static/chunks/d2be314c3ece3fbe.js"],"OutletBoundary"]
+4:"$Sreact.suspense"
+0:{"buildId":"3XmsPytiJkbyTETrd673c","rsc":["$","$1","c",{"children":[["$","div",null,{"className":"space-y-6","children":[["$","div",null,{"children":[["$","h1",null,{"className":"text-2xl sm:text-3xl font-bold text-foreground","children":"Business Profit Calculator"}],["$","p",null,{"className":"mt-2 text-sm sm:text-base text-muted-foreground max-w-2xl","children":"Use 50+ ready-made business presets or enter your own numbers to understand revenue, costs, profit and ROI."}]]}],["$","$L2",null,{}]]}],[["$","script","script-0",{"src":"/_next/static/chunks/a363963e17ad7ac3.js","async":true}],["$","script","script-1",{"src":"/_next/static/chunks/bf79ffb3694dc29d.js","async":true}]],["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"loading":null,"isPartial":false}
+5:null

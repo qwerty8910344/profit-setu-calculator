@@ -1,0 +1,34 @@
+ ›   Warning: --build is now the default and can safely be omitted.
+[96m[1m​[22m[39m
+[96m[1mNetlify Build                                                 [22m[39m
+[96m[1m────────────────────────────────────────────────────────────────[22m[39m
+[36m[1m​[22m[39m
+[36m[1m❯ Version[22m[39m
+  @netlify/build 35.11.2
+[36m[1m​[22m[39m
+[36m[1m❯ Flags[22m[39m
+  accountId: 69cc4535679e02047da86815
+  deployId: 69cc4983e649400f3551a36e
+[36m[1m​[22m[39m
+[36m[1m❯ Current directory[22m[39m
+  /Users/apple/Documents/profit Setu/next-calculator
+[36m[1m​[22m[39m
+[36m[1m❯ Config file[22m[39m
+  /Users/apple/Documents/profit Setu/next-calculator/netlify.toml
+[36m[1m​[22m[39m
+[36m[1m❯ Context[22m[39m
+  production
+[36m[1m​[22m[39m
+[36m[1m❯ Using Next.js Runtime - v5.15.9[22m[39m
+[96m[1m​[22m[39m
+[96m[1mbuild.command from netlify.toml                               [22m[39m
+[96m[1m────────────────────────────────────────────────────────────────[22m[39m
+​
+[36m$ npm run build[39m
+
+> my-project@0.1.0 build
+> next build
+
+▲ Next.js 16.1.6 (Turbopack)
+
+  Creating an optimized production build ...

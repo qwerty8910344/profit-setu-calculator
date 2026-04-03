@@ -1,0 +1,5 @@
+1:"$Sreact.fragment"
+2:I[97367,["/_next/static/chunks/b43e70e148021a5b.js","/_next/static/chunks/d2be314c3ece3fbe.js"],"OutletBoundary"]
+3:"$Sreact.suspense"
+0:{"buildId":"3XmsPytiJkbyTETrd673c","rsc":["$","$1","c",{"children":[["$","div",null,{"children":[["$","h1",null,{"className":"text-3xl font-bold mb-6","children":"Profit Setu Dashboard"}],["$","p",null,{"children":"Choose a calculator category from the sidebar."}]]}],null,["$","$L2",null,{"children":["$","$3",null,{"name":"Next.MetadataOutlet","children":"$@4"}]}]]}],"loading":null,"isPartial":false}
+4:null
