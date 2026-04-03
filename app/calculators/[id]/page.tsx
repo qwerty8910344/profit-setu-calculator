@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: CalculatorPageProps): Promise
 
   if (!preset && !tool) {
     return {
-      title: "Calculator not found | ProfitSetu",
+      title: "Calculator not found | Profit Setu",
     }
   }
 
@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: CalculatorPageProps): Promise
   const description = preset?.description || `Free online ${name} calculator for instant results.`
 
   return {
-    title: `${name} Calculator | ProfitSetu`,
+    title: `${name} Calculator | Profit Setu`,
     description: description,
     alternates: {
       canonical: `/calculators/${id}`,

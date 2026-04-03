@@ -48,6 +48,7 @@ export function ProfitCalculator({ initialPresetId }: { initialPresetId?: string
   const [showResult, setShowResult] = useState(false)
   const [showEmbed, setShowEmbed] = useState(false)
   const [copied, setCopied] = useState(false)
+  const [shareCopied, setShareCopied] = useState(false)
   const { toast } = useToast()
 
   const reportRef = useRef<HTMLDivElement>(null)
@@ -1736,7 +1737,7 @@ Check it now on Profit Setu!`;
                         <div className="mt-6 space-y-4 animate-in fade-in slide-in-from-top-2 duration-300">
                           <div className="relative">
                             <pre className="p-4 bg-black/5 rounded-xl text-[10px] font-mono text-muted-foreground break-all whitespace-pre-wrap border border-black/5 max-h-32 overflow-y-auto">
-                              {`<iframe src="https://profit-setu-calculator.netlify.app/?tool=${activeTool}" width="100%" height="600" frameborder="0"></iframe>`}
+                              {`<iframe src="https://profit-setu-calculator.vercel.app/?tool=${activeTool}" width="100%" height="600" frameborder="0"></iframe>`}
                             </pre>
                             <Button
                               size="icon"
@@ -1747,12 +1748,72 @@ Check it now on Profit Setu!`;
                               {copied ? <Check className="w-4 h-4 text-green-500" /> : <Copy className="w-4 h-4 text-accent" />}
                             </Button>
                           </div>
-                          <p className="text-[10px] text-center text-muted-foreground font-bold italic opacity-60">
-                            ✨ Boost engagement by embedding our calculation engine.
-                          </p>
                         </div>
                       )}
                     </Card>
+                  </div>
+
+                  <div className="py-4 flex justify-center">
+                    <Button
+                      variant="ghost"
+                      onClick={() => {
+                        const tool = ALL_TOOLS.find(t => t.id === activeTool);
+                        const metricsText = `Profit Setu - ${tool?.label} Results\n---\nDate: ${new Date().toLocaleDateString()}\nTool: ${tool?.label}\nCategory: ${tool?.category}\n---\nCreated with Profit Setu 🚀`;
+                        navigator.clipboard.writeText(metricsText);
+                        toast({
+                          title: "Structured Data Copied!",
+                          description: "Ready to paste into your reports.",
+                        });
+                      }}
+                      className="text-[10px] font-black uppercase tracking-widest text-muted-foreground hover:text-accent flex items-center gap-2"
+                    >
+                      <Copy className="w-3 h-3" />
+                      Copy Raw Metrics
+                    </Button>
+                  </div>
+
+                  {/* Share Result Feature */}
+                  <div className="flex justify-center gap-4">
+                    <Button
+                      onClick={async () => {
+                        const tool = ALL_TOOLS.find(t => t.id === activeTool);
+                        const shareText = `Check out my calculation results for ${tool?.label} on Profit Setu! 🚀`;
+                        const shareUrl = window.location.href;
+                        
+                        if (navigator.share) {
+                          try {
+                            await navigator.share({
+                              title: 'Profit Setu Results',
+                              text: shareText,
+                              url: shareUrl,
+                            });
+                          } catch (err) {
+                            console.error('Share failed:', err);
+                          }
+                        } else {
+                          navigator.clipboard.writeText(`${shareText}\n${shareUrl}`);
+                          setShareCopied(true);
+                          setTimeout(() => setShareCopied(false), 2000);
+                          toast({
+                            title: "Link Copied!",
+                            description: "Share it with your team/clients.",
+                          });
+                        }
+                      }}
+                      className="h-14 px-8 rounded-2xl font-black uppercase tracking-widest bg-accent text-accent-foreground hover:scale-105 transition-all shadow-lg flex items-center gap-2 group"
+                    >
+                      {shareCopied ? <Check className="w-5 h-5" /> : <Share2 className="w-5 h-5 group-hover:rotate-12 transition-transform" />}
+                      {shareCopied ? 'Copied!' : 'Share Results'}
+                    </Button>
+                    <Button
+                      onClick={exportPDF}
+                      disabled={isExporting}
+                      variant="outline"
+                      className="h-14 px-8 rounded-2xl font-black uppercase tracking-widest border-accent/20 hover:bg-accent/10 hover:scale-105 transition-all flex items-center gap-2 group"
+                    >
+                      {isExporting ? <Loader2 className="w-5 h-5 animate-spin" /> : <FileDown className="w-5 h-5 group-hover:-translate-y-1 transition-transform" />}
+                      Export PDF
+                    </Button>
                   </div>
 
                    {/* Insight */}
