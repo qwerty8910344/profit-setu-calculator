@@ -26,8 +26,8 @@ export function SplineBackground() {
         )}
       </div>
       {/* Premium overlay with lighter gradient to allow 3D visibility */}
-      <div className="absolute inset-0 bg-gradient-to-tr from-black/80 via-black/40 to-[#ccff0008]" />
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/60" />
+      <div className="absolute inset-0 bg-gradient-to-tr from-black/60 via-black/20 to-[#ccff0005]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/10 to-black/40" />
     </div>
   )
 }
