@@ -53,39 +53,39 @@ a[href*="spline.design"] {
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: oklch(0.96 0.01 80);
-  --foreground: oklch(0.2 0.02 60);
-  --card: oklch(0.99 0.005 80);
-  --card-foreground: oklch(0.2 0.02 60);
-  --popover: oklch(0.99 0.005 80);
-  --popover-foreground: oklch(0.2 0.02 60);
-  --primary: oklch(0.25 0.02 60);
-  --primary-foreground: oklch(0.98 0.005 80);
-  --secondary: oklch(0.93 0.01 80);
-  --secondary-foreground: oklch(0.25 0.02 60);
-  --muted: oklch(0.93 0.015 80);
-  --muted-foreground: oklch(0.5 0.02 60);
-  --accent: oklch(0.55 0.15 145);
-  --accent-foreground: oklch(0.98 0.005 80);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.98 0 0);
-  --border: oklch(0.88 0.02 80);
-  --input: oklch(0.93 0.01 80);
-  --ring: oklch(0.55 0.15 145);
-  --chart-1: oklch(0.55 0.15 145);
-  --chart-2: oklch(0.65 0.12 180);
-  --chart-3: oklch(0.45 0.1 220);
-  --chart-4: oklch(0.75 0.15 90);
-  --chart-5: oklch(0.7 0.18 70);
+  --background: #fdfdfc;
+  --foreground: #1a1a1a;
+  --card: #ffffff;
+  --card-foreground: #1a1a1a;
+  --popover: #ffffff;
+  --popover-foreground: #1a1a1a;
+  --primary: #1a1a1a;
+  --primary-foreground: #fdfdfc;
+  --secondary: #f4f4f4;
+  --secondary-foreground: #1a1a1a;
+  --muted: #f4f4f4;
+  --muted-foreground: #71717a;
+  --accent: #ccff00;
+  --accent-foreground: #000000;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: #e4e4e7;
+  --input: #f4f4f4;
+  --ring: #ccff00;
+  --chart-1: #ccff00;
+  --chart-2: #80ff00;
+  --chart-3: #00ffcc;
+  --chart-4: #ffff00;
+  --chart-5: #00ccff;
   --radius: 0.75rem;
-  --sidebar: oklch(0.98 0.005 80);
-  --sidebar-foreground: oklch(0.2 0.02 60);
-  --sidebar-primary: oklch(0.25 0.02 60);
-  --sidebar-primary-foreground: oklch(0.98 0.005 80);
-  --sidebar-accent: oklch(0.93 0.01 80);
-  --sidebar-accent-foreground: oklch(0.25 0.02 60);
-  --sidebar-border: oklch(0.88 0.02 80);
-  --sidebar-ring: oklch(0.55 0.15 145);
+  --sidebar: #ffffff;
+  --sidebar-foreground: #1a1a1a;
+  --sidebar-primary: #1a1a1a;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #f4f4f4;
+  --sidebar-accent-foreground: #1a1a1a;
+  --sidebar-border: #e4e4e7;
+  --sidebar-ring: #ccff00;
 }
 
 .container {
@@ -229,22 +229,22 @@ html {
 /* Glow Effect */
 .glow {
   box-shadow: 
-    0 0 20px oklch(0.55 0.15 145 / 0.3),
-    0 0 40px oklch(0.55 0.15 145 / 0.2),
-    0 0 60px oklch(0.55 0.15 145 / 0.1);
+    0 0 20px rgba(204, 255, 0, 0.3),
+    0 0 40px rgba(204, 255, 0, 0.2),
+    0 0 60px rgba(204, 255, 0, 0.1);
 }
 
 .glow-soft {
   box-shadow: 
-    0 0 30px oklch(0.55 0.15 145 / 0.15),
-    0 0 60px oklch(0.55 0.15 145 / 0.1);
+    0 0 30px rgba(204, 255, 0, 0.15),
+    0 0 60px rgba(204, 255, 0, 0.1);
 }
 
 /* Glass Effect */
 .glass {
-  background: oklch(0.99 0.005 80 / 0.7);
+  background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(20px);
-  border: 1px solid oklch(1 0 0 / 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .dark .glass {
@@ -263,7 +263,7 @@ html {
   background: linear-gradient(
     90deg,
     transparent 0%,
-    oklch(1 0 0 / 0.1) 50%,
+    rgba(255, 255, 255, 0.1) 50%,
     transparent 100%
   );
   background-size: 200% 100%;
@@ -282,7 +282,7 @@ html {
   position: absolute;
   inset: -2px;
   border-radius: calc(var(--radius) + 2px);
-  background: linear-gradient(135deg, oklch(0.55 0.15 145), oklch(0.65 0.12 180), oklch(0.55 0.15 145));
+  background: linear-gradient(135deg, #ccff00, #80ff00, #ccff00);
   z-index: -1;
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -301,8 +301,8 @@ html {
 .tilt-3d:hover {
   transform: perspective(1000px) rotateX(2deg) rotateY(-2deg) translateZ(10px);
   box-shadow: 
-    0 25px 50px -12px oklch(0 0 0 / 0.25),
-    0 0 30px oklch(0.55 0.15 145 / 0.1);
+    0 25px 50px -12px rgba(0, 0, 0, 0.25),
+    0 0 30px rgba(204, 255, 0, 0.1);
 }
 
 /* Pulse Ring */
@@ -322,7 +322,7 @@ html {
   position: absolute;
   inset: -4px;
   border-radius: inherit;
-  border: 2px solid oklch(0.55 0.15 145);
+  border: 2px solid #ccff00;
   animation: pulse-ring 2s ease-out infinite;
 }
 
@@ -377,30 +377,30 @@ html {
 /* Neon Glow Effects */
 .neon-glow {
   box-shadow: 
-    0 0 5px oklch(0.55 0.15 145),
-    0 0 10px oklch(0.55 0.15 145),
-    0 0 20px oklch(0.55 0.15 145),
-    0 0 40px oklch(0.55 0.15 145 / 0.5),
-    0 0 80px oklch(0.55 0.15 145 / 0.3);
+    0 0 5px #ccff00,
+    0 0 10px #ccff00,
+    0 0 20px #ccff00,
+    0 0 40px rgba(204, 255, 0, 0.5),
+    0 0 80px rgba(204, 255, 0, 0.3);
 }
 
 .neon-text {
   text-shadow: 
-    0 0 5px oklch(0.55 0.15 145),
-    0 0 10px oklch(0.55 0.15 145),
-    0 0 20px oklch(0.55 0.15 145 / 0.8),
-    0 0 40px oklch(0.55 0.15 145 / 0.5);
+    0 0 5px #ccff00,
+    0 0 10px #ccff00,
+    0 0 20px rgba(204, 255, 0, 0.8),
+    0 0 40px rgba(204, 255, 0, 0.5);
 }
 
 /* Holographic Effect */
 .holographic {
   background: linear-gradient(
     135deg,
-    oklch(0.55 0.15 145 / 0.3) 0%,
-    oklch(0.65 0.12 180 / 0.3) 25%,
-    oklch(0.7 0.15 90 / 0.3) 50%,
-    oklch(0.6 0.18 300 / 0.3) 75%,
-    oklch(0.55 0.15 145 / 0.3) 100%
+    rgba(204, 255, 0, 0.3) 0%,
+    rgba(0, 255, 204, 0.3) 25%,
+    rgba(255, 255, 0, 0.3) 50%,
+    rgba(204, 0, 255, 0.3) 75%,
+    rgba(204, 255, 0, 0.3) 100%
   );
   background-size: 400% 400%;
   animation: holographic-shift 8s ease infinite;
@@ -445,14 +445,14 @@ html {
 .glass-premium {
   background: linear-gradient(
     135deg,
-    oklch(1 0 0 / 0.15) 0%,
-    oklch(1 0 0 / 0.05) 100%
+    rgba(255, 255, 255, 0.15) 0%,
+    rgba(255, 255, 255, 0.05) 100%
   );
   backdrop-filter: blur(40px) saturate(180%);
-  border: 1px solid oklch(1 0 0 / 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 
-    0 8px 32px oklch(0 0 0 / 0.1),
-    inset 0 0 0 1px oklch(1 0 0 / 0.1);
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.1);
 }
 
 .dark .glass-premium {
@@ -482,10 +482,10 @@ html {
   border-radius: inherit;
   background: linear-gradient(
     var(--border-angle, 0deg),
-    oklch(0.55 0.15 145),
-    oklch(0.65 0.12 180),
-    oklch(0.7 0.15 90),
-    oklch(0.55 0.15 145)
+    #ccff00,
+    #80ff00,
+    #00ffcc,
+    #ccff00
   );
   animation: rotate-border 4s linear infinite;
 }
@@ -504,12 +504,12 @@ html {
 /* Depth Shadow */
 .depth-shadow {
   box-shadow:
-    0 1px 1px oklch(0 0 0 / 0.02),
-    0 2px 2px oklch(0 0 0 / 0.02),
-    0 4px 4px oklch(0 0 0 / 0.02),
-    0 8px 8px oklch(0 0 0 / 0.02),
-    0 16px 16px oklch(0 0 0 / 0.02),
-    0 32px 32px oklch(0 0 0 / 0.02);
+    0 1px 1px rgba(0, 0, 0, 0.02),
+    0 2px 2px rgba(0, 0, 0, 0.02),
+    0 4px 4px rgba(0, 0, 0, 0.02),
+    0 8px 8px rgba(0, 0, 0, 0.02),
+    0 16px 16px rgba(0, 0, 0, 0.02),
+    0 32px 32px rgba(0, 0, 0, 0.02);
 }
 
 /* Stacking 3D Cards */
