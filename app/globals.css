@@ -1,14 +1,21 @@
 @import 'tailwindcss';
 @import 'tw-animate-css';
 
-/* Hide Spline Watermark */
+/* Hide Spline Watermark - Ultra Robust */
 #spline-watermark, 
 [class*="spline-watermark"],
-a[href*="spline.design"] {
+a[href*="spline.design"],
+spline-viewer #logo,
+spline-viewer #watermark,
+.spline-watermark,
+canvas + div > a[href*="spline"] {
     display: none !important;
     visibility: hidden !important;
     opacity: 0 !important;
     pointer-events: none !important;
+    z-index: -9999 !important;
+    width: 0 !important;
+    height: 0 !important;
 }
 
 /* Premium Grain Texture */
